@@ -17,7 +17,7 @@ function getRepos(username) {
 
 function getStarCount(repos) {
   return repos.data.reduce(function(count, repo) {
-    return count + repos.stargazers_count;
+    return count + repo.stargazers_count;
   }, 0);
 }
 
@@ -56,7 +56,7 @@ function sortPlayers(players) {
 
 module.exports = {
   battle: function(players) {
-    axios.all(players.map(getUserData))
+    return axios.all(players.map(getUserData))
       .then(sortPlayers)
       .catch(handleError);
   },
