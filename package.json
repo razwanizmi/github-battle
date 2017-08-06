@@ -19,6 +19,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.16.2",
+    "dotenv-webpack": "^1.5.4",
     "query-string": "^5.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
